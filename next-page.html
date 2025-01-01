@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Image Page</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            overflow: hidden; /* Remove scrollbars */
+        }
+
+        body {
+            background: url('photo-1.jpg') no-repeat center center fixed; /* Add background image */
+            background-size: cover; /* Make sure it covers the entire screen */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(240, 239, 243);
+            text-align: center;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .full-image {
+            width: 100%;
+            height: 100vh;
+            object-fit: contain; /* Ensure the full image is visible */
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .question-container {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+        }
+
+        .question-container input {
+            font-size: 1.2em;
+            padding: 10px;
+            width: 70%;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .question-container button {
+            font-size: 1.2em;
+            padding: 10px 20px;
+            background-color: pink;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .question-container button:hover {
+            background-color: #ff66b2;
+        }
+
+        .ghost {
+            position: absolute;
+            bottom: -100px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 50px;
+            color: white;
+            opacity: 0.8;
+            animation: floatGhost 7s ease-in-out infinite;
+        }
+
+        @keyframes floatGhost {
+            0% {
+                transform: translateX(-50%) translateY(0);
+                opacity: 0.8;
+            }
+            50% {
+                opacity: 1;
+                transform: translateX(-50%) translateY(-500px);
+            }
+            100% {
+                opacity: 0;
+                transform: translateX(-50%) translateY(-1000px);
+            }
+        }
+
+        /* Responsive Design */
+        @media (min-width: 1025px) {
+            .full-image {
+                height: auto; /* Adjust height for laptops */
+                max-height: 90vh;
+                object-fit: cover;
+                object-position: top; /* Ensure the top of the image is visible */
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .question-container input {
+                font-size: 1em;
+                padding: 8px;
+                width: 80%;
+            }
+
+            .question-container button {
+                font-size: 1em;
+                padding: 8px 16px;
+            }
+
+            .ghost {
+                font-size: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .question-container input {
+                font-size: 0.9em;
+                padding: 8px;
+                width: 90%;
+            }
+
+            .question-container button {
+                font-size: 0.9em;
+                padding: 8px 16px;
+            }
+
+            .ghost {
+                font-size: 35px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .question-container input {
+                font-size: 0.8em;
+                padding: 6px;
+                width: 95%;
+            }
+
+            .question-container button {
+                font-size: 0.8em;
+                padding: 6px 12px;
+            }
+
+            .ghost {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Full Image Background -->
+    <img src="photo-1.jpg" class="half-image" alt="Full Image"> <!-- Replace with the main image -->
+
+    <!-- Asking the question -->
+    <div class="question-container">
+        <div>Who makes you very happy?</div>
+        <p>Mera naam daal or kiska daalega uska v daal ke dekh liyo</p>
+        <input type="text" id="happyPerson" placeholder="Enter name">
+        <button onclick="submitAnswer()">Submit</button>
+    </div>
+
+    <!-- Ghost Animation -->
+    <div class="ghost">👻</div> <!-- Ghost icon -->
+
+    <script>
+        function submitAnswer() {
+            var happyPerson = document.getElementById("happyPerson").value.toLowerCase();
+            if (happyPerson === "abhishek") {
+                // Redirect to the final page
+                window.location.href = "final-page.html"; // Create this page for the next step
+            } else if (happyPerson) {
+                alert("That's great! " + happyPerson + " makes you happy! Happy new year jaaan");
+            } else {
+                alert("Please enter the name of the person who makes you happy.");
+            }
+        }
+    </script>
+</body>
+</html>

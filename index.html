@@ -1,0 +1,302 @@
+<h1>Happy New Year 2025 dear bhai sahab😘</h1>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎉 Happy New Year 2025 🎉</title>
+    <style>
+        /* General styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', Arial, sans-serif;
+            background: url('photo-3.jpg') no-repeat center center fixed;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
+
+        /* Header Section */
+        header {
+            padding: 50px 20px;
+            background: linear-gradient(120deg, #ffbe0b, #ff006e);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 2;
+        }
+
+        header h1 {
+            font-size: 3.5em;
+            color: white;
+            text-shadow: 2px 2px 10px #000;
+            margin: 0;
+            animation: textGlow 2s infinite alternate;
+        }
+
+        @keyframes textGlow {
+            0% {
+                text-shadow: 0 0 5px #ffbe0b, 0 0 10px #ff006e, 0 0 20px #8338ec;
+            }
+            100% {
+                text-shadow: 0 0 10px #8338ec, 0 0 20px #ff006e, 0 0 30px #ffbe0b;
+            }
+        }
+
+        /* Main Image Section */
+        .main-image img {
+            width: 90%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 20px;
+            margin-top: 30px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            animation: bounce 2s infinite alternate;
+        }
+
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-20px);
+            }
+        }
+
+        /* Gallery Section */
+        .gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        .gallery img {
+            width: 150px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Floating Particles */
+        .particle {
+            position: fixed;
+            top: -10%;
+            left: 50%;
+            width: 15px;
+            height: 15px;
+            background: radial-gradient(circle, gold, transparent);
+            border-radius: 50%;
+            animation: float 5s infinite ease-in-out;
+        }
+
+        .particle:nth-child(odd) {
+            animation-duration: 4s;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) translateX(0);
+                opacity: 1;
+            }
+            50% {
+                transform: translateY(100vh) translateX(-30px);
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(200vh) translateX(30px);
+                opacity: 0;
+            }
+        }
+
+        /* DOB Section */
+        .dob-section {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: linear-gradient(120deg, #8338ec, #ff006e);
+            padding: 20px;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+            color: white;
+        }
+
+        .dob-section h2 {
+            margin: 0 0 10px;
+            font-size: 1.5em;
+        }
+
+        .dob-section input {
+            padding: 10px;
+            font-size: 1em;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            width: 200px;
+            margin-right: 10px;
+        }
+
+        .dob-section button {
+            padding: 10px 20px;
+            background: gold;
+            color: black;
+            font-size: 1em;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .dob-section button:hover {
+            background-color: #ffbe0b;
+        }
+
+        /* Romantic Gallery Additions */
+        .romantic-header {
+            margin-top: 20px;
+            font-size: 2.5em;
+            font-family: 'Pacifico', cursive;
+            color: #ff1654;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .romantic-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 30px;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 1s ease-in-out;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .quote {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(255, 255, 255, 0.7);
+            padding: 10px 20px;
+            border-radius: 10px;
+            color: #ff1654;
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.2em;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .emoji-container {
+            position: fixed;
+            bottom: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2.5em;
+            animation: rise 5s infinite ease-in-out;
+        }
+
+        @keyframes rise {
+            0% {
+                bottom: -50px;
+                opacity: 0;
+            }
+            50% {
+                bottom: 50%;
+                opacity: 1;
+            }
+            100% {
+                bottom: 100%;
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>🎉 Happy New Year 2025 🎉</h1>
+    </header>
+
+    <!-- Main Image Section -->
+    <div class="main-image">
+        <img src="photo-5.jpg" alt="Main Celebration Image">
+    </div>
+
+    <!-- Gallery Section -->
+    <div class="gallery">
+        <img src="photo-1.jpg" alt="Celebration 1">
+        <img src="photo-3.jpg" alt="Celebration 2">
+        <img src="photo-4.jpg" alt="Celebration 3">
+        <img src="photo-5.jpg" alt="Celebration 4">
+    </div>
+
+    <!-- DOB Section -->
+    <div class="dob-section">
+        
+        <h2>Enter your Name</h2>
+        <p>Note: Enter first letter as Capital</p>
+        
+        <input type="text" placeholder="Enter Name">
+        <button>Submit</button>
+    </div>
+
+    <audio autoplay loop>
+        <source src="abc.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <script>
+        let attempts = 0;
+        const correctPassword = "Bhutwa"; // Replace with your actual password
+
+        document.querySelector('.dob-section button').addEventListener('click', function() {
+            const input = document.querySelector('.dob-section input').value;
+            
+            if (input === correctPassword) {
+                window.location.href = 'slideshow.html';
+            } else {
+                attempts++;
+                if (attempts === 1) {
+                    alert("Yaad kro aa jaayega");
+                } else if (attempts === 2) {
+                    alert("Thapad padega, Hin: Your  Nickname given by me");
+                } else if (attempts >= 3) {
+                    alert("Kya bhutuka jee itna bhi nhi pta ");
+                    alert("Correct password is: " + correctPassword);
+                    attempts = 0; // Reset attempts
+                }
+            }
+        });
+    </script>
+
+    <div class="emoji-container">
+        ❤️      🫂     🫀       🥰
+    </div>
+</body>
+</html>

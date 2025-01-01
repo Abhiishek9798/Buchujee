@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brother for life</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #eaf7ff; /* Light blue */
+            background-image: url('photo-4.jpg'); /* Replace with your background image */
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            color: #f53a3a; /* Deep blue */
+            height: 100vh;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+        }
+
+        /* Title Section */
+        .header {
+            text-align: center;
+            padding: 50px 20px;
+            font-size: 3em;
+            font-weight: bold;
+            color: #ff69b4; /* Hot pink */
+            text-shadow: 2px 2px 4px #000; /* Subtle shadow effect */
+            background-color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 20px;
+            z-index: 10;
+            position: relative;
+        }
+
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+            overflow: hidden;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 100px);
+        }
+
+        /* Each Slide */
+        .slide {
+            display: none;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        /* Image Styling */
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        /* Quote Text */
+        .quote {
+            text-align: center;
+            font-size: 1.6em;
+            color: #ffffff;
+            background: rgba(0, 51, 102, 0.6); /* Deep blue with transparency */
+            padding: 15px;
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            border-radius: 10px;
+        }
+
+        /* Navigation Arrows */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            color: #ff69b4;
+            font-weight: bold;
+            font-size: 24px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.5);
+            user-select: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: #ff69b4;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .prev {
+            left: 20px;
+        }
+
+        .next {
+            right: 20px;
+        }
+
+        /* Input and Button Styles */
+        .color-slide input {
+            font-size: 1.2em;
+            padding: 10px;
+            margin-top: 20px;
+            width: 60%;
+            border-radius: 10px;
+            border: 2px solid #00aaff; /* Light blue border */
+            background: linear-gradient(90deg, #ffffff, #d4f1ff); /* Gradient background */
+            color: #e6434e;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .color-slide input:focus {
+            outline: none;
+            transform: scale(1.05);
+            border-color: #ff69b4; /* Change border color on focus */
+            box-shadow: 0 6px 12px rgba(255, 105, 180, 0.5);
+        }
+
+        .color-slide button {
+            padding: 12px 30px; /* Adjust size */
+            font-size: 1.2em;
+            border: none;
+            border-radius: 30px; /* Rounded button */
+            cursor: pointer;
+            color: white;
+            background: linear-gradient(90deg, #ff69b4, #ff8c94); /* Gradient pink background */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s ease, transform 0.2s ease-in-out;
+        }
+
+        .color-slide button:hover {
+            background: linear-gradient(90deg, #ff8c94, #ff69b4); /* Reverse gradient on hover */
+            transform: scale(1.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header {
+                font-size: 2em;
+                padding: 20px;
+            }
+            .quote {
+                font-size: 1.2em;
+                padding: 10px;
+            }
+            .color-slide input {
+                width: 80%;
+                font-size: 1em;
+            }
+            .color-slide button {
+                font-size: 1em;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Title Section -->
+<div class="header">
+    😘😘Happy New Year buchu jee 😘😘
+</div>
+
+<!-- Slideshow Section -->
+<div class="slideshow-container">
+    <!-- Slides -->
+    <div class="slide"><img src="photo-6.jpg" alt="Photo 1"><div class="quote">""Brothers are the anchor in life's storm and the wings in its calm."</div></div>
+    <div class="slide"><img src="photo-7.jpg" alt="Photo 2"><div class="quote">"Happy New Year, brother! Here's to another year of laughter, support, and unforgettable memories"</div></div>
+    <div class="slide"><img src="photo-8.jpg" alt="Photo 3"><div class="quote">"A brother is both your greatest rival and your fiercest protector—bound by love, laughter, and unbreakable memories"</div></div>
+    <div class="slide"><img src="photo-9.jpg" alt="Photo 4"><div class="quote">"Ab is se jaayeda jhooth nhi bola jaayega mere se "</div></div>
+    <div class="slide"><img src="photo-5.jpg" alt="Photo 5"><div class="quote">"Bond we stand, Forever together, hand in hand."</div></div>
+    <div class="slide color-slide">
+        <div>What is your favorite color?</div>
+        
+        <input type="text" id="color-input" placeholder="Enter your favorite color here">
+        <button onclick="checkColor()">Submit</button>
+    </div>
+
+    <!-- Navigation -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+<script>
+    let slideIndex = 0;
+
+    function showSlides(n) {
+        const slides = document.getElementsByClassName("slide");
+        if (n >= slides.length) slideIndex = 0;
+        if (n < 0) slideIndex = slides.length - 1;
+
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex].style.display = "block";
+    }
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    showSlides(slideIndex);
+
+    function checkColor() {
+        const color = document.getElementById("color-input").value.toLowerCase().trim();
+        if (color === "r" || color === "b") {
+            alert("Try again! Hint: It's a beautiful color.");
+             // Redirect to next page
+        } else {
+            window.location.href = "photo-page.html";
+            
+        }
+    }
+</script>
+
+</body>
+</html>

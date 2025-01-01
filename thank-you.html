@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            overflow: hidden; /* Remove scrollbars */
+        }
+
+        body {
+            background: linear-gradient(to bottom, #ffccff, #99ccff); /* Gradient background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            color: white;
+        }
+
+        .full-image {
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .thank-you {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3em;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .heart-container {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .heart {
+            width: 50px;
+            height: 50px;
+            background-color: #ff6699;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%) rotate(45deg);
+            animation: floatUp 4s ease-in-out infinite;
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        }
+
+        .heart:before,
+        .heart:after {
+            content: '';
+            width: 50px;
+            height: 50px;
+            background-color: #ff6699;
+            position: absolute;
+            border-radius: 50%;
+        }
+
+        .heart:before {
+            top: -25px;
+            left: 0;
+        }
+
+        .heart:after {
+            top: 0;
+            left: -25px;
+        }
+
+        @keyframes floatUp {
+            0% {
+                bottom: -50px;
+                opacity: 0;
+                transform: translateX(0) scale(0.8);
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                bottom: 100%;
+                opacity: 0;
+                transform: translateX(20px) scale(1.2);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Full Image Background -->
+    <img src="photo-6.jpg" class="half-image" alt="Photo"> <!-- Replace with the final photo -->
+
+    <!-- Thank You Message -->
+    <div class="thank-you">Thank You!</div>
+
+    <!-- Floating Hearts -->
+    <div class="heart-container">
+        <div class="heart" style="animation-delay: 0s; left: 10%;"></div>
+        <div class="heart" style="animation-delay: 1s; left: 20%;"></div>
+        <div class="heart" style="animation-delay: 1.5s; left: 30%;"></div>
+        <div class="heart" style="animation-delay: 0.5s; left: 40%;"></div>
+        <div class="heart" style="animation-delay: 2s; left: 50%;"></div>
+        <div class="heart" style="animation-delay: 2.5s; left: 60%;"></div>
+        <div class="heart" style="animation-delay: 3s; left: 70%;"></div>
+        <div class="heart" style="animation-delay: 3.5s; left: 80%;"></div>
+    </div>
+
+</body>
+</html>

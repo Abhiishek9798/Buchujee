@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brotherhood</title>
+    <style>
+        /* General Styles */
+        html, body {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to bottom, blue 50%, pink 50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: #fff;
+        }
+
+        /* Diamond Container for the Image */
+        .diamond-container {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            transform: rotate(45deg);
+            overflow: hidden;
+            margin-top: -50px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .diamond-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: rotate(-45deg);
+        }
+
+        /* Message Styling */
+        .message {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.5em;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        /* Guest Name Input Section */
+        .guest-name-container {
+            text-align: center;
+            width: 100%;
+            position: absolute;
+            bottom: 20px;
+        }
+
+        .guest-name-container input {
+            font-size: 1em;
+            padding: 10px;
+            width: 70%;
+            max-width: 300px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            color: #333;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .guest-name-container input:focus {
+            outline: none;
+            border-color: #007bff;
+            box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+        }
+
+        .guest-name-container button {
+            font-size: 1em;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .guest-name-container button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Floating Hearts */
+        .heart {
+            position: absolute;
+            bottom: -50px;
+            font-size: 30px;
+            color: black;
+            animation: floatHeart 5s ease-in infinite;
+            pointer-events: none;
+        }
+
+        @keyframes floatHeart {
+            0% {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(-800px) scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .diamond-container {
+                width: 250px;
+                height: 250px;
+            }
+
+            .message {
+                font-size: 1.3em;
+            }
+
+            .guest-name-container input {
+                width: 80%;
+                font-size: 0.9em;
+            }
+
+            .guest-name-container button {
+                font-size: 0.9em;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .diamond-container {
+                width: 200px;
+                height: 200px;
+            }
+
+            .message {
+                font-size: 1.2em;
+            }
+
+            .guest-name-container input {
+                width: 90%;
+                font-size: 0.8em;
+            }
+
+            .guest-name-container button {
+                font-size: 0.8em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .diamond-container {
+                width: 150px;
+                height: 150px;
+            }
+
+            .message {
+                font-size: 1em;
+            }
+
+            .guest-name-container input {
+                width: 95%;
+                font-size: 0.7em;
+            }
+
+            .guest-name-container button {
+                font-size: 0.7em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="message">Diamond inside a Diamond!</div>
+
+    <div class="diamond-container">
+        <img src="photo-3.jpg" alt="buchu"> <!-- Replace with her photo -->
+    </div>
+
+    <!-- Floating Hearts Container -->
+    <div id="hearts-container"></div>
+
+    <!-- Asking for the guest name -->
+    <div class="guest-name-container">
+        <div>Enter your Favourite :</div>
+        <p>Mummy v like dea</p>
+        <input type="text" id="guestName" placeholder="Enter name">
+        <button onclick="submitName()">Submit</button>
+    </div>
+
+    <script>
+        function submitName() {
+            var guestName = document.getElementById("guestName").value.trim().toLowerCase();
+            if (guestName === "mummy") {
+                // Redirect to the next page
+                window.location.href = "next-page.html"; // Create this page for the next step
+            } else {
+                alert("chal bhai mummy likh jaayeda style mt maar");
+            }
+        }
+
+        // Function to generate floating hearts
+        function createHearts() {
+            const heartsContainer = document.getElementById('hearts-container');
+            for (let i = 0; i < 15; i++) {
+                const heart = document.createElement('div');
+                heart.classList.add('heart');
+                heart.innerHTML = '&#10084;';
+                heart.style.left = `${Math.random() * 100}vw`;
+                heart.style.animationDelay = `${Math.random() * 5}s`;
+                heartsContainer.appendChild(heart);
+            }
+        }
+        window.onload = createHearts;
+    </script>
+</body>
+</html>
